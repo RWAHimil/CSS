@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+      }
+      .accordian {
+        border: 2px solid black;
+        width: 50vw;
+        padding: 20px;
+      }
+      .accordian-text {
+        /* padding: 10px; */
+        display: flex;
+        justify-content: space-between;
+      }
+      .accordian-text p {
+        cursor: pointer;
+        width: 95%;
+        border: 1px solid red;
+      }
+      .icon {
+        width: 20px;
+        height: 20px;
+        background: grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+      .accordian-content {
+        padding: 10px;
+        display: none;
+      }
+      .accordian-text:hover + .accordian-content {
+        display: block;
+      }
+
+      .para:hover + .icon {
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accordian">
+      <div class="accordian-text">
+        <p class="para">What is Full Stack Development</p>
+        <div class="icon">
+          <i class="fa-sharp fa-solid fa-angle-down"></i>
+        </div>
+      </div>
+      <div class="accordian-content">
+        <p>
+          A full-stack developer is a developer or engineer who can build both
+          the front end and the back end of a website. The front end (the parts
+          of a website a user sees and interacts with) and the back end (the
+          behind-the-scenes data storage and processing) require different skill
+          sets
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
