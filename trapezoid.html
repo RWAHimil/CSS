@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+      }
+
+      .container {
+        width: 500px;
+        height: 500px;
+        /* border: 2px solid black; */
+        margin: 0 auto;
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* perspective: 500px; */
+      }
+      .box {
+        width: 330px;
+        height: 330px;
+        /* border: 1px solid black; */
+        margin: auto;
+        transform-style: preserve-3d;
+        transition: all 5s ease-in-out;
+        position: relative;
+      }
+      .box:hover {
+        transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg);
+      }
+      .face {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+      .front {
+        background: rgba(240, 128, 128, 0.49);
+        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        transform: translateZ(100px);
+        transition: all 1s ease-in-out;
+      }
+      .back {
+        background: rgba(144, 238, 144, 0.525);
+        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        transform: translateZ(-100px);
+      }
+      .left {
+        width: 200px;
+        height: 338px;
+        /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
+        background: rgba(32, 178, 171, 0.555);
+        transform: rotateY(90deg) rotateX(-14deg) translateZ(-58px)
+          translateY(10px) translateX(0px);
+      }
+      .right {
+        width: 200px;
+        height: 338px;
+        background: rgba(0, 0, 139, 0.214);
+        position: absolute;
+        transform: rotateY(90deg) rotateX(-14deg) translateZ(180px)
+          translateY(-50px);
+        top: 0;
+      }
+      .top {
+        width: 250px;
+        height: 198px;
+        background: lightsalmon;
+        position: absolute;
+        top: 0;
+        transform: rotateX(90deg) translateZ(98px) translateX(80px);
+      }
+      .bottom {
+        width: 246px;
+        height: 198px;
+        background: rgba(50, 205, 50, 0.481);
+        position: absolute;
+        top: 0;
+        transform: rotateX(90deg) translateZ(-230px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="face front"></div>
+        <div class="face back"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+  </body>
+</html>

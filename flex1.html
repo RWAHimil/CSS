@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-container {
+        display: flex; /* Activates flexbox layout */
+        /* width: 600px; Fixed width for illustration */
+        background-color: lightgray; /* Background color for visualization */
+        flex-wrap: wrap;
+      }
+
+      .item {
+        background-color: coral; /* Item background color */
+        padding: 20px; /* Space inside each item */
+        text-align: center; /* Centered text */
+        border: 1px solid black;
+      }
+
+      .item1 {
+        flex-grow: 1; /* Item 1 will take available space */
+      }
+
+      .item2 {
+        flex-grow: 1; /* Item 2 will take twice the space of Item 1 */
+      }
+
+      .item3 {
+        flex-grow: 1; /* Item 3 will take the same space as Item 1 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="item item1">Item 1</div>
+      <div class="item item2">Item 2</div>
+      <div class="item item3">Item 3</div>
+    </div>
+  </body>
+</html>

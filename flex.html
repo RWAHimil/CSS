@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+      }
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 20px;
+      }
+      .container {
+        display: flex;
+        border: 2px inset;
+        /* height: 300px; */
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .item {
+        border: 1px solid lightgray;
+        padding: 20px;
+        border-radius: 10px;
+        min-width: 100px; /* Set a minimum width for items */
+        width: 300px;
+      }
+      .item:hover {
+        background: rgb(192, 191, 191);
+      }
+      .item1 {
+        flex-grow: 1;
+        flex-shrink: 0;
+      }
+      .item2 {
+        flex-shrink: 1;
+      }
+      .item3 {
+        flex-shrink: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">Item 1</div>
+      <div class="item item2">Item 2</div>
+      <div class="item item3">Item 3</div>
+    </div>
+  </body>
+</html>
